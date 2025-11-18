@@ -1,4 +1,4 @@
-:root {
+/* :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -65,8 +65,25 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+} */
+
+@import "tailwindcss";
+
+/* Ẩn icon reveal password mặc định của Edge */
+@layer utilities {
+  .no-password-reveal::-ms-reveal,
+  .no-password-reveal::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+  }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Ẩn icon reveal password mặc định trên Edge */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
