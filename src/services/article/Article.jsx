@@ -2,6 +2,7 @@ import axios from "axios";
 
 export const getArticleByCategory = async (category) => {
   try {
+    const a =0;
     const res = await axios.get(`/api/articles/category/${category}/`, {
         headers: {
                         "Content-Type": "application/json",
