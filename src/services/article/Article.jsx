@@ -4,7 +4,7 @@ export const getArticleByCategory = async (category) => {
   try {
     const res = await axios.get(`/api/articles/category/${category}/`, {
         headers: {
-            "Content-Type": "application/json",
+            "Content-Types": "application/json",
         },
     });
     return res.data;
